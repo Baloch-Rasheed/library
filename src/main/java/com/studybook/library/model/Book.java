@@ -1,5 +1,8 @@
 package com.studybook.library.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Book {
 
     //Fields

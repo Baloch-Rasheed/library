@@ -22,10 +22,16 @@
             <td th:text="${book.prize}"></td>
             <td th:text="${book.category}"></td>
             <td th:text="${book.publishedIn}"></td>
+            <td>
+                <form action="#" th:action="@{/deletion}" method="post">
+                    <input type="submit" value="Delete">
+                </form>
+            </td>
+
         </tr>
     </table>
   <br>
   <a href="/add-book">Add Book</a>
-  <a href="/">Home</a>
+  <a href="/homepage">Home</a>
 </body>
 </html>

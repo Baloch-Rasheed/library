@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Book</title>
 </head>
 <body>
   <h1>Book Details</h1>
-  <form action="#" th:action="@{/additionbook}" method="post">
+  <form action="#" th:action="@{/additionbook}" method="post" th:object="${book}">
       <input type="text" th:field="${book.name}" name="name" placeholder="Enter Book Name">
       <input type="text" th:field="${book.author}" name="author" placeholder="Enter Book Author">
       <input type="number" th:field="${book.prize}" name="prize" placeholder="Enter Book Prize">
@@ -16,7 +16,7 @@
       <input type="submit" value="Add Book">
   </form>
   <br>
-  <a href="/">Home</a>
+  <a href="/homepage">Home</a>
   <a href="/booklist">Books</a>
 </body>
 </html>
